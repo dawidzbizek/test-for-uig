@@ -1,12 +1,12 @@
 <?php
-const maxElementsOfVersion = 4;
+const MAX_ELEMENTS_OF_VERSION = 4;
 
 function decodeHumanVersion(string $humanVersion) : int
 {
     $version = [];
     $decodedVersion = explode('.', str_replace(['a', 'b'], '', $humanVersion));
 
-    for($i = 0; $i < maxElementsOfVersion; $i++)
+    for($i = 0; $i < MAX_ELEMENTS_OF_VERSION; $i++)
     {
         $rawValue = $decodedVersion[$i] ?? '0';
         $tmpValue = str_split($rawValue);
